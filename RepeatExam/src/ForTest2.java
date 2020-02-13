@@ -10,11 +10,24 @@ public class ForTest2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+//		int sum = 0;
+//		int max = 10;
+//		for (int i = 1 ; i <= max ; i ++) {
+//			sum += i;
+//		}
+//		System.out.println(max + " 까지의 합 : " + sum);
+		
 		int sum = 0;
-		int max = 10;
-		for (int i = 1 ; i <= max ; i ++) {
+		int cnt = 0;
+		for (int i = 1 ; i <= 10 ; i++ ) {
 			sum += i;
+			cnt++;
+			
 		}
-		System.out.println(max + " 까지의 합 : " + sum);
+		System.out.println(cnt + " 까지의 합 : " + sum);
+		
+		
+		
+		
 	}
 }
