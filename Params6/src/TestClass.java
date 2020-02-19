@@ -5,11 +5,9 @@ public class TestClass {
 
 	void instanceMethod() { //인스턴스 메서드
 		
-		
 	}
 	
 	static void staticMethod() { //static 메서드
-		
 		
 	}
 
@@ -23,5 +21,10 @@ public class TestClass {
 //		instanceMethod();			// 에러 ) 절대 인스턴스 메서드를 호출할 수 없다
 		staticMethod();				// static 메서드는 호출할 수 있다.
 	}
+	
+	
+	//static 키워드가 먼저 생성된다
+	//new 키워드로 만든 것만 생성된다
+	
 	
 }
