@@ -28,6 +28,8 @@ public class TvMain3 {
 		System.out.println("전원은 " + tv2.power);
 		System.out.println("색상은 " + tv2.color);	
 		System.out.println();
+
+		//그냥 클래스 명을 변수로 사용 할 경우 첫번째 값의 주소를 가리키고 있으므로 그것이 덮어지면 주소 조차 같아짐
 		tv2 = tv;
 
 		System.out.println("복제 성공함");
@@ -56,7 +58,6 @@ public class TvMain3 {
 		System.out.println("채널은 " + tv2.channel);
 		System.out.println("전원은 " + tv2.power);
 		System.out.println("색상은 " + tv2.color);	
-
 
 	}
 }

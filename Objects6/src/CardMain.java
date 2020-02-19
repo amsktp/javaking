@@ -17,6 +17,11 @@ public class CardMain {
 		card2.kind = "Spade";
 		card2.num = 4;
 		
+		//그럼에도 클래스 변수는 쓸수있음
+		Card card3 = null;
+		System.out.println(card3.width);
+		
+		
 		System.out.println("card1은 " + card1.kind + ", " + card1.num + "이며, 크기는 " + card1.width + ", " + card1.height);
 		System.out.println("card2은 " + card2.kind + ", " + card2.num + "이며, 크기는 " + card2.width + ", " + card2.height);
 		

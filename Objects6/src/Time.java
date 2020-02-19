@@ -12,7 +12,7 @@ public class Time {
 		return hour;
 	}
 
-	void gethour(int h) {
+	void getHour(int h) {
 		if(h < 0 || h > 23) {
 			return;
 		}

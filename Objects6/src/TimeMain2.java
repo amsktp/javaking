@@ -9,7 +9,7 @@ public class TimeMain2 {
 		
 		System.out.println("한국 시간");
 		
-		koreanTime.gethour(17);
+		koreanTime.getHour();
 		System.out.print(koreanTime.hour + ":");
 		koreanTime.minute = 30;
 		System.out.print(koreanTime.minute + ":");
