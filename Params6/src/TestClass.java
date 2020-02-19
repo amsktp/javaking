@@ -20,7 +20,7 @@ public class TestClass {
 	
 	
 	static void staticMethod2() { //static에서도
-		instanceMethod();			// 에러 ) 인스턴스  메서드를 호출할 수 없다
+//		instanceMethod();			// 에러 ) 절대 인스턴스 메서드를 호출할 수 없다
 		staticMethod();				// static 메서드는 호출할 수 있다.
 	}
 	
