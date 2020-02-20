@@ -1,5 +1,5 @@
-//8일차 17.02.19 (수)
 //메서드 명명규칙
+//8일차 17.02.19 (수)
 //변수명 동일
 public class TestClass {
 
@@ -22,9 +22,7 @@ public class TestClass {
 		staticMethod();				// static 메서드는 호출할 수 있다.
 	}
 	
-	
 	//static 키워드가 먼저 생성된다
-	//new 키워드로 만든 것만 생성된다
-	
+	//new 키워드로 만든 것만 생성된다	
 	
 }
