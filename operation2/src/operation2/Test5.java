@@ -26,7 +26,7 @@ public class Test5 {
 							"입력하신 값은 " + input + "\n잘못 입력하셨습니다.";
 		System.out.println(result);
 		
-		}
+		
 	}
 
 }

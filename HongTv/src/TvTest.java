@@ -36,8 +36,7 @@ public class TvTest {
 		ctv.captionTvInfo();
 		mtv.muteTvInfo();
 		
-		ctv.
-		
+	
 		
 	} // main
 }
