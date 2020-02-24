@@ -7,12 +7,12 @@ public class CardPlay {
 			Card card = new Card();
 			
 			card.init();
-			
-			card.init(3,5);
-			
 			str = card.getCard();
 			System.out.println(str);
 			
+			card.init(3,5);
+			str = card.getCard();
+			System.out.println(str);
 			
 		}
 
