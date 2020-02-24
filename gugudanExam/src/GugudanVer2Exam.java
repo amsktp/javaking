@@ -26,6 +26,7 @@ public class GugudanVer2Exam {
 		int cnt1 = 0;
 		int cnt2 = 0;
 
+		//배열에 값 넣기
 		for (int i = 2; i <= 9; i++) {
 			cnt2=0;
 			for (int j = 1; j <= 9; j++) {
@@ -36,6 +37,7 @@ public class GugudanVer2Exam {
 		}
 		cnt1 = 0;
 		
+		//구구단 출력
 		for (int i = 2; i <= 9; i++) {
 			cnt2=0;
 			for (int j = 1; j <= 9; j++) {

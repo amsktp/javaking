@@ -13,7 +13,7 @@ public class GugudanVer1Exam {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-//		int[] mulNumArr = new int[0];
+		//		int[] mulNumArr = new int[0];
 
 		//		2 + "*" + = (2 * i)
 		//		2 * 1 = mulNumArr[0] 3 * 1 = mulNumArr[1]  ,,, 	9 * 1 = mulNumArr[8]
@@ -23,25 +23,29 @@ public class GugudanVer1Exam {
 		//		
 		//		2 * 9 = 18 3 * 9 = 27  ,,, 	9 * 9 = mulNumArr[??]
 
-		//결과 값을 넣을 배열
-		
+
 		int[] mulNumArr = new int[81];
 		int cnt = 0;
-		 for (int i = 1; i <= 9; i++) {
+
+
+		//배열에 값 넣기
+		for (int i = 1; i <= 9; i++) {
 			for (int j = 2; j <= 9; j++) {
 				mulNumArr[cnt] = i * j;
 				cnt++;
 			}
 		}
-		 cnt = 0;
-		 for (int i = 1; i <= 9; i++) {
+		cnt = 0;
+
+		//배열에 있는 값 출력
+		for (int i = 1; i <= 9; i++) {
 			for (int j = 2; j <= 9; j++) {
 				System.out.print(j + " * " + i + " = " + mulNumArr[cnt] + "\t");
 				cnt++;
 			}
 			System.out.println();
 		}
-		 
+
 	}
 }
 
