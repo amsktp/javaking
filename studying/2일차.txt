@@ -1,0 +1,133 @@
+﻿ⓐ 형 변환(type casting)
+ⓑtest1에 관하여
+ⓒtest2에 관하여
+ⓓ연산자
+ⓔScanner에 관하여
+
+
+
+ⓐ 형 변환(type casting)
+	-내림처리 할때 유용
+	
+	ex)
+		double d = 100.0;
+		int num = 100;
+		
+		int sum = (int)d + num;
+		System.out.println("d= " + d);
+		System.out.println("num= " + num); 
+		System.out.println("sum= " + sum);
+		
+		결과 : d= 100.0
+			num= 100
+			sum= 200
+	
+	자동 형 변환
+	int num = 0;
+		long bigNum = 0; //원래는 불가능하지만 (int)0; 이 자동으로 들어간다고 보면됨	
+	
+	int->long 자동형변환 가능 but long->int는 자동형변환 불가능 ==> int 4byte < long 8byte 이기때문에
+	float과 double은 서로 자동형변환 불가능 ==> 소숫점 아주 낮은곳에 무슨값이 있을지 몰라서
+	
+	1.boolean을 제외한 나머지 7개의 기본형은 서로 형변환이 가능하다
+	2.기본형과 참조형은 서로 형변환 할 수 없다
+	3.서로 다른 타입의 변수간의 연산은 형변환을 하는 것이 원칙이지만,
+	  값의 범위가 작은 타입에서 큰 타입으로 형변환은 생략할 수 있다.
+	  
+		long bigNum = 123456789123L; double d;
+		d= bigNum;  System.out.println(d);   결과 ==> 1.23456789123E11
+	
+ⓑtest1에 관하여
+	''+'' 는 아스키값의 합으로 나온다
+	''+"" 는 문자의 연결로 나온다
+	(char)(''+'') 는 아스키값의 합의 문자로 나온다
+	true는 1이 아닌 true 문자열 자체로 친다
+
+ⓒtest2에 관하여
+	""는 빈문자, " " 띄어쓰기라고 읽는다.
+	String은 문자열 변수
+	7+7+"" 같은 경우는 14이다. ==> 사칙연산처럼 앞에서부터 계산하기 때문이다.
+	따라서 ""+7+7+ 은 77이다.
+	
+	
+ⓓ연산자
+	https://myeonguni.tistory.com/39
+		논리부정 연산자 = !    //!true = false
+
+		사칙 연산자
+			모든 이항 연산자는 연산을 수행하기 전에
+			- 크기가 4byte이하잉ㄴ 자료형을 int 형으로 변환한다
+			- 피연산자들의 타입을 서로 일치시킨다.	
+			
+			1. int형보다 크기가 작은 자료형은 int형으로 형변한 후에 연산을 수행한다
+			ex) byte + short -> int + int -> int
+			2. 두개의 피연산자 중 자료형의 표현범위가 큰 폭에 맞춰서 형변한 후 연산을 수행한다
+			ex) int + float -> float + float -> float 
+			3. 정수형 간의 나눗셈에서 0으로 나는 것은 금지되어 있다		
+
+		내림처리 방법
+			(원본값 * 자릿수) / 되돌릴 자릿수 = > 자릿수 내림
+			float pi = 3.141592f;
+			float shortPi =(int)(pi * 1000) / 1000f;
+			결과 ==> 3.141 (3번째까지 내림)
+		올림처리 방법
+			(원본값 * 자릿수+0.9) / 되돌릴 자릿수 = > 자릿수 내림
+			float pi = 3.141592f;
+			float shortPi =(int)(pi * 100 + 0.9) / 100f;
+			결과 ==> 3.15 (3번째에서 올림)
+			
+		나누기 연산자
+			/는 몫만 구해주고 %는 나머지를 구해준다
+		
+		비교 연산자
+			미만	초과	이상	이하
+			<	>	>=	<=
+			- 비교할 수를 앞에 놓는것을 지향한다
+		
+		논리 연산자
+			&& : and 연산자 => 하나라도 거짓이면 거짓이다.
+			|| : or 연산자 => 하나라도 참이면 참이다.
+		
+			★☆TIP : 문제에 "거나" 가 들어가면 ||, "고" 가 들어가면 &&
+		
+		단항 연산자
+			변수 앞이나 뒤에 사용 가능
+			++ : 변수 = 변수 + 1
+			-- : 변수 = 변수 - 1
+			☆변수 앞에 연산자가 있을경우 그 줄이 실행될 때 연산되고, 변수 뒤에 연산자가 있을경우 그 줄이 끝날때 연산 됨
+		
+			ex) int n =5; int k = 10;
+		
+			System.out.println(n++);			결과 => 	5
+			System.out.println(++k);					11
+			System.out.println(n);						6
+			System.out.println(k);						11
+		
+		★System.out.println(여기에 변수값을 넣는것도 가능함 => n = n + 1);
+
+		삼항 연산자
+			(조건식) ? 식1 (true) : 식2 (false)
+			ex) absX = (x >= 0) ? x : -x;
+		
+		다중 삼항 연산자
+			(조건식) ? 식1(true) : (조건식) ? 식2(true) : 식3(false)
+			
+		대입 연산자
+			=, +=, -=, *=, %=, /=
+			ex) n += 3   ==>  n = n + 3
+				n -= 3   ==>  n = n - 3
+			
+			
+ⓔScanner에 관하여
+	Scanner 변수 선언방법
+		Scanner 변수명 = new Scanner(System.in)
+	
+	Scanner 사용 방법
+		1. 숫자를 받는 방법 int num = scan.nextInt();
+		2. 문자열을 받는 방법 String char = scan.nextLine();
+
+ⓕ
+ⓖ
+ⓗ
+ⓘ
+ⓙ

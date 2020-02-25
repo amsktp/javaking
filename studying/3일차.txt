@@ -1,0 +1,139 @@
+﻿ⓐif문에 대하여
+ⓑif else문에 대하여
+ⓒif else if문에 대하여
+ⓓgithub에 대하여
+ⓔ창에 대하여
+ⓐSwitch문에 대하여
+ⓕMath.random() 함수에 대하여
+
+
+
+ⓐif문에 대하여 (조건문)
+	if문 expression(표현식)
+		if(조건식) {
+			조건식이 true일 때 수행할 문장들을 적는다
+		}
+
+	-if문은 중첩이 가능함 (다중 if문 or 중첩 if문)
+	
+ⓑif else문에 대하여 (조건문)
+	if else문
+		expression(표현식)
+		if(조건식) {
+			조건식의 true일 때 수행될 문장들을 적는다
+		}
+		else {
+			조건식이 false일 때 수행될 문장들을 적는다
+		}
+	
+	-if else문은 중첩이 가능함
+		
+ⓒif else if문에 대하여 (조건문)
+	if else if문
+		expression(표현식)
+		if(조건식1) {
+			조건식1의 연산결과가 true일 때 수행할 문장들을 적는다
+		}
+		else if(조건식2) {
+			조건식2의 연산결과가 true일 때 수행할 문장들을 적는다
+		}
+		else if(조건식3) {
+			조건식3의 연산결과가 true일 때 수행할 문장들을 적는다
+		}
+		else {
+			위의 어느 조건식도 만족하지 않을떄 수행할 문장들을 적는다
+		}
+
+	-if else if문은 중첩이 가능함
+
+	★중첩은 풀어낼수록 좋다
+
+ⓓgithub에 대하여
+	https://github.com/
+	-파일 형상 관리
+		-버전 관리
+		-백업 / 복구
+	-무료버전을 사용한다면 무조건 전세계 사람들이 다 볼수있게 공개됨
+	
+	Repository name : 닉네임??
+	Description : 설명
+	
+	-강사님 자료 공유 하는곳 psuu0007/AppJavaAvdClass
+	
+	1. 최초 등록하려면 먼저 해야하는 과정
+		프로젝트 우클릭 -> team -> share -> 창 나오면 우측 상단 create -> 경로설정(우리의 경로 : C:\repositories\javaking)
+		-> finish -> finish -> 하면 프로젝트 익스플로러에 ?와 마스터가나옴
+		-> 해당 프로젝트 우클릭 -> Team -> Add to index -> 해당 프로젝트가 ?에서 +로 바뀜
+		-> 프로젝트 우클릭 -> team -> commit -> commit message 설명 적기 -> commit and push
+		-> URL에 github 자기꺼 주소 등록 -> 진행 -> 로그인 후 -> 창 뜨면 close -> 프로넥트ㅇ
+		
+	간단하게 보면 우클릭 -> team -> share
+			 우클릭 -> team -> add to index -> commit and push ★commit and push 누르면 우측하단에 초록색 바 올라가는데 아무것도 누르지말기
+			 우클릭 -> team -> commit
+	
+		여러개 선택해서 한꺼번에 가능
+		
+	이클립스러 git창을 여는 두가지 방법
+		1. window -> showview other -> Git-> Git repository
+		2. window -> perspective -> open perspective -> git
+		
+			이후 공통 -> clone a git -> URL창에 https로 시작하는거 붙여넣기
+		
+		*Author는 작성자 comiiter 관리자
+		*단 연동하면 기존 워크스페이스 폴더에서 사라집니다
+		
+		
+	다른사람꺼 불러오기
+		다른사람 git 홈페이지에서 clone or download에 나오는 주소 복사 -> git 창 불러와서 좌측에서 세번째 구름모양 클릭 -> URL 복사한거 붙여넣고 자신의 아이디 비번 입력
+		 -> 디렉토리 나오는 부분에서 \AppJavaAvdClass(다른사람 폴더) 수정-> finish 
+
+	다른사람꺼를 내 프로젝트에 포함시키기
+		다른사람 Working Tree -> 해당 프로젝트 우클릭 -> 우클릭 -> import project ->  디렉토리 수정할 필요는 없음 -> finish
+		단★★★ 프로젝트 명이 나의 프로젝트명과 중복된다면 넣으면 안된다.
+	
+	git 공유의 과정
+	
+		git : 홈페이지 
+		local : 컴퓨터
+		repository : 컴퓨터 (경로?? 폴더??)
+		
+		-무언가(파일1)를 만들면 local에 있음
+		-파일1을 다른사람과 공유하기 위해서는 git에 올려야하는데 그러기 위해서는 repository를 만들어야함
+		-파일1을 repository에 등록한다.(commit)
+		-repository에 있는것을 git(홈페이지)에 올린다.(push)
+
+	★연동이 아닌 복제이다. => 다운 받은사람이 수정해도 원본은 그대로 유지
+
+	에러 : 아이콘에서 J가 비어있는경우는 깨진 자바 파일이다.
+			team -> share 당시에 "as this location overlaps with location" 오류가 발생 시 해당 WORKING TREE에서 .project 파일을 삭제하면 정상적으로 작동한다.
+
+	다른 사람꺼를 가져온다음에 다시 공유하기
+		-> 해당 프로젝트우클릭 -> Team -> disconect -> git repositiories창에서 해당 git 프로젝트?? 그거 우클릭 delete repository -> 제일위에꺼만 체크 후 delete
+		-> 다시 해당 프로젝트 우클릭 -> share -> 이후 공유와 동일
+
+ⓔ창에 관하여
+	Navigator (모든 폴더와 파일 보여줌)
+	Package Explorer(우리가 프로그래밍 하면서 써야하는 곳)
+	Git Repositories(Git 연동한것들 보여주거나 연동 시키는 곳)
+	Console(프로그램 실행 결과 보여주는 곳)
+
+ⓐSwitch문에 대하여 (조건문)
+	표현식
+		switch (key) {
+		case value:
+			break;	
+		
+		default:
+			break;
+		}
+		
+		key 값이 value 일경우 case를 하고 그게 아니라면 default를 한다.
+		break의 용도는 다른것과 구분하는 지표, break를 안쓰면 해당 case와 다음case까지 출력함
+
+ⓕMath.random() 함수에 대하여
+	0 < Math.random() < 1 범위의 난수 실수 발생
+	따라서 (int)(Math.random() * 숫자) + 1 을 하면 1 ~ 숫자 사이의 랜덤값만 나타낼수 있음
+ⓖ
+ⓗ
+ⓘ
+ⓙ

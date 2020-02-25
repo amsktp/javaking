@@ -3,12 +3,15 @@ public class StudentMain {
 
 	public static void main(String args[]) {
 		
-		Student student1 = new Student("홍길동" ,2 , 1, 100, 60, 76);
-		int sum = 0;
-		double avr = 0.0;
-		sum = student1.getTotal();
-		avr = student1.getAverage();
-		student1.info(sum, avr);		
+		
+		StudentVo s1 = new StudentVo();
+		Student student1 = new Student(s1, "이찬양", 5,26,100,80,86);
+		System.out.println(s1);
+		
+		int sum = student1.getTotal(s1);
+		double avr = student1.getAverage(s1);
+		student1.info(s1 , sum , avr);
+		
 		
 	}
 }
